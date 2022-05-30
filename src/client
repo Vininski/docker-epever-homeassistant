@@ -30,7 +30,7 @@ $connectionSettings = (new \PhpMqtt\Client\ConnectionSettings)
     ->setUsername($conf->get('mqttUsername'))
     
     // The password used for authentication when connecting to the broker.
-    ->setPassword($conf->get('mqttPassword'))
+    ->setPassword($conf->get('mqttPassword'));
 $loopCount = 1;
 
 echo "Epever Tracer Poller for Home Assistant.";
