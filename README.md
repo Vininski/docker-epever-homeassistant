@@ -31,7 +31,7 @@ It's pretty straightforward, just clone down the sources, set the configuration 
 
 ```bash
 # Clone down sources on the host you want to monitor...
-git clone https://github.com/ned-kelly/docker-epever-homeassistant.git /opt/docker-epever-homeassistant
+git clone https://github.com/Vininski/docker-epever-homeassistant.git /opt/docker-epever-homeassistant
 cd /opt/docker-epever-homeassistant
 
 # Configure your MQTT server settings, offsets, serial port, etc...
