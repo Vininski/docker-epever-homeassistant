@@ -169,7 +169,7 @@ function registerHATopic($sensorName, $displayUnits, $haIcon='solar-power') {
     echo "Creating sensor: " . $sensorName . "\n";
     $name = $conf->get('mqttDevicename') . "_" . $sensorName;
 
-    $mqtt->connect($connectionSettings);
+    $mqtt->connect($connectionSettings, true);
     $mqtt->publish(
         $conf->get('mqttTopic') . '/sensor/' . $name . '/config',
         '{
@@ -194,7 +194,7 @@ function sendHAData($sensorName, $sensorValue) {
     if (!empty($sensorValue)) {
         $name = $conf->get('mqttDevicename') . "_" . $sensorName;
 
-        $mqtt->connect($connectionSettings);
+        $mqtt->connect($connectionSettings, true);
         $mqtt->publish(
             $conf->get('mqttTopic') . '/sensor/' . $name,
             $sensorValue,
